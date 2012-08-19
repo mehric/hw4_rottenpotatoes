@@ -14,6 +14,11 @@ Rottenpotatoes::Application.routes.draw do
   #   resources :products
   resources :movies
 
+  resources :movies do
+    #get 'movie_direct_by', :on => :member
+	#match "/movies/movie_direct_by/:title" => "movies#direct_by", :as => :movie_direct_by
+  end
+
   # Sample resource route with options:
   #   resources :products do
   #     member do

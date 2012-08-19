@@ -10,8 +10,13 @@ module NavigationHelpers
   #
   # step definition in web_steps.rb
   #
-  def path_to(page_name)
+def path_to(page_name)
     case page_name
+	when /^the edit page for "(.*)"$/
+		edit_movie_path(Movie.find_by_title($1))
+	
+	when /^the details page for "(.*)"/
+		movie_path(Movie.find_by_title($1))
 
     when /^the home\s?page$/
       '/'
