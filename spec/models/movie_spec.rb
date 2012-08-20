@@ -1,41 +1,11 @@
 require 'spec_helper'
 #require 'movies_controller.rb'
      
-#describe Movies do
-  #describe 'Find Movies With Same Director' do
-	#before :each do
-	#  @fake_results = [mock(Movie),mock(Movie)]
-	#end
-	#it 'should call the method that performs the movies search' do
-	  #Movie.should_receive(:find_similar_by_director).with(1)
-	  #Movie.stub(:find_similar_by_director)
-	  #post :find_similar, {:id => '4'}
-	  #response.should render_template(:find_similar)
-
-	  #movie = Movie.new
-	  #movie.should_receive(:find_similar_by_director).with(1)
-	  #Movie.should_receive(:find).with(1).and_return(movie)
-	  #get :find_similar, {:id => '1'}
-
-	  #movie = Movie.new
-	  #movie.should_receive(:find_similar).with(1)
-	  #post :find_similar, {:id => 1}
-	  #movie = Movie.new
-	  #Movie.should_receive(:find_similar)
-	  #Movie.should_receive(:find).and_return(movie)
-	  #get :find_similar, {:id => '1'}
-	  #post movie_find_similar_path, {:id => 4}
-	  #response.should render_template(:movie_direct_by_path)
-	#end
-
-    #it 'should call the model method that performs find with same director' do
-    #  Movie.should_receive(:directed_by).with('Star Wars').
-    #  post :movie_direct_by_path, {:movie => 'Star Wars'}
-    #end
-    #it 'should select the Search Results template for rendering' do
-    #  Movie.stub(:find_similar)
-    #  post :find_similar, {:id => 4}
-    #  response.should render_template(:find_similar)
-    #end
- # end
-#end
+describe Movie do
+  describe 'Creating Movie' do
+	@Star_Wars_movie = Movie.create!({:title => 'Star Wars', :director => 'George Lucas', :rating => 'PG', :release_date => '1977-05-25'})
+    @Star_Wars_movie.title.should == "Star Wars"
+	@Alien_movie = Movie.create!({:title => 'Alien', :rating => 'R', :release_date => '1979-05-25'})
+    @Alien_movie.title.should == "Alien"
+  end	
+end

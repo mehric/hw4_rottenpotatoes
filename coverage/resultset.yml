@@ -105,7 +105,7 @@ RSpec:
     - !!null 
     - !!null 
     - !!null 
-  :created_at: 2012-08-21 00:33:15.946066000 +08:00
+  :created_at: 2012-08-21 02:37:22.083961000 +08:00
 C:/Ruby192/bin/rspec spec:
   :original_result:
     C:/Users/Asus/Documents/GitHub/hw4_rottenpotatoes/app/controllers/application_controller.rb:
@@ -126,11 +126,11 @@ C:/Ruby192/bin/rspec spec:
     - 1
     - !!null 
     - 1
-    - 0
+    - 2
     - !!null 
-    - 0
+    - 2
     - !!null 
-    - 0
+    - 2
     - 0
     - 0
     - !!null 
@@ -208,8 +208,8 @@ C:/Ruby192/bin/rspec spec:
     - !!null 
     - !!null 
     - 1
-    - 0
+    - 2
     - !!null 
     - !!null 
     - !!null 
-  :created_at: 2012-08-21 01:23:42.849195000 +08:00
+  :created_at: 2012-08-21 02:47:34.139968000 +08:00
