@@ -1,213 +1,215 @@
---- 
-RSpec: 
-  :original_result: 
-    C:/Users/Asus/Documents/GitHub/hw4_rottenpotatoes/app/controllers/application_controller.rb: 
+---
+RSpec:
+  :original_result:
+    C:/Users/Asus/Documents/GitHub/hw4_rottenpotatoes/app/controllers/application_controller.rb:
     - 1
     - 1
-    - 
-    C:/Users/Asus/Documents/GitHub/hw4_rottenpotatoes/app/helpers/application_helper.rb: 
+    - !!null 
+    C:/Users/Asus/Documents/GitHub/hw4_rottenpotatoes/app/helpers/application_helper.rb:
     - 1
-    - 
-    C:/Users/Asus/Documents/GitHub/hw4_rottenpotatoes/app/helpers/movies_helper.rb: 
+    - !!null 
+    C:/Users/Asus/Documents/GitHub/hw4_rottenpotatoes/app/helpers/movies_helper.rb:
     - 1
-    - 
-    - 1
-    - 0
-    - 
-    - 
-    C:/Users/Asus/Documents/GitHub/hw4_rottenpotatoes/app/controllers/movies_controller.rb: 
-    - 1
-    - 
-    - 1
-    - 
-    - 
-    - 
-    - 
+    - !!null 
     - 1
     - 0
-    - 
+    - !!null 
+    - !!null 
+    C:/Users/Asus/Documents/GitHub/hw4_rottenpotatoes/app/controllers/movies_controller.rb:
+    - 1
+    - !!null 
+    - 1
+    - 0
+    - !!null 
+    - 0
+    - !!null 
     - 0
     - 0
     - 0
-    - 0
-    - 0
-    - 0
-    - 
-    - 
-    - 
-    - 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
     - 1
     - 0
     - 0
-    - 
-    - 
-    - 
+    - !!null 
+    - !!null 
+    - !!null 
     - 1
     - 0
     - 0
-    - 
+    - !!null 
     - 0
-    - 
+    - !!null 
     - 0
-    - 
-    - 0
-    - 0
-    - 
+    - !!null 
     - 0
     - 0
-    - 0
-    - 0
-    - 
-    - 
+    - !!null 
     - 0
     - 0
     - 0
     - 0
+    - !!null 
+    - !!null 
     - 0
-    - 
     - 0
-    - 
-    - 
+    - 0
+    - 0
+    - 0
+    - !!null 
+    - 0
+    - !!null 
+    - !!null 
     - 1
-    - 
-    - 
-    - 
+    - !!null 
+    - !!null 
+    - !!null 
     - 1
     - 0
     - 0
     - 0
-    - 
-    - 
+    - !!null 
+    - !!null 
     - 1
     - 0
-    - 
-    - 
+    - !!null 
+    - !!null 
     - 1
     - 0
     - 0
     - 0
     - 0
-    - 
-    - 
+    - !!null 
+    - !!null 
     - 1
     - 0
     - 0
     - 0
     - 0
-    - 
-    - 
-    - 
-    C:/Users/Asus/Documents/GitHub/hw4_rottenpotatoes/app/models/movie.rb: 
+    - !!null 
+    - !!null 
+    - !!null 
+    C:/Users/Asus/Documents/GitHub/hw4_rottenpotatoes/app/models/movie.rb:
     - 1
     - 1
     - 0
-    - 
-    - 
-    - 
-  :created_at: 2012-08-20 13:31:57.343721 +08:00
-C:/Ruby192/bin/rspec spec: 
-  :original_result: 
-    C:/Users/Asus/Documents/GitHub/hw4_rottenpotatoes/app/controllers/application_controller.rb: 
-    - 1
-    - 1
-    - 
-    C:/Users/Asus/Documents/GitHub/hw4_rottenpotatoes/app/helpers/application_helper.rb: 
-    - 1
-    - 
-    C:/Users/Asus/Documents/GitHub/hw4_rottenpotatoes/app/helpers/movies_helper.rb: 
-    - 1
-    - 
+    - !!null 
+    - !!null 
     - 1
     - 0
-    - 
-    - 
-    C:/Users/Asus/Documents/GitHub/hw4_rottenpotatoes/app/controllers/movies_controller.rb: 
+    - !!null 
+    - !!null 
+    - !!null 
+  :created_at: 2012-08-21 00:33:15.946066000 +08:00
+C:/Ruby192/bin/rspec spec:
+  :original_result:
+    C:/Users/Asus/Documents/GitHub/hw4_rottenpotatoes/app/controllers/application_controller.rb:
     - 1
-    - 
     - 1
-    - 
-    - 
-    - 
-    - 
+    - !!null 
+    C:/Users/Asus/Documents/GitHub/hw4_rottenpotatoes/app/helpers/application_helper.rb:
     - 1
-    - 0
-    - 
-    - 0
-    - 0
-    - 0
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
+    - !!null 
+    C:/Users/Asus/Documents/GitHub/hw4_rottenpotatoes/app/helpers/movies_helper.rb:
+    - 1
+    - !!null 
     - 1
     - 0
+    - !!null 
+    - !!null 
+    C:/Users/Asus/Documents/GitHub/hw4_rottenpotatoes/app/controllers/movies_controller.rb:
+    - 1
+    - !!null 
+    - 1
     - 0
-    - 
-    - 
-    - 
+    - !!null 
+    - 0
+    - !!null 
+    - 0
+    - 0
+    - 0
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
     - 1
     - 0
     - 0
-    - 
-    - 0
-    - 
-    - 0
-    - 
-    - 0
-    - 0
-    - 
-    - 0
-    - 0
-    - 0
-    - 0
-    - 
-    - 
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 
-    - 0
-    - 
-    - 
-    - 1
-    - 
-    - 
-    - 
+    - !!null 
+    - !!null 
+    - !!null 
     - 1
     - 0
     - 0
+    - !!null 
     - 0
-    - 
-    - 
+    - !!null 
+    - 0
+    - !!null 
+    - 0
+    - 0
+    - !!null 
+    - 0
+    - 0
+    - 0
+    - 0
+    - !!null 
+    - !!null 
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - !!null 
+    - 0
+    - !!null 
+    - !!null 
     - 1
-    - 0
-    - 
-    - 
+    - !!null 
+    - !!null 
+    - !!null 
     - 1
     - 0
     - 0
     - 0
+    - !!null 
+    - !!null 
+    - 1
     - 0
-    - 
-    - 
+    - !!null 
+    - !!null 
     - 1
     - 0
     - 0
     - 0
     - 0
-    - 
-    - 
-    - 
-    C:/Users/Asus/Documents/GitHub/hw4_rottenpotatoes/app/models/movie.rb: 
+    - !!null 
+    - !!null 
+    - 1
+    - 0
+    - 0
+    - 0
+    - 0
+    - !!null 
+    - !!null 
+    - !!null 
+    C:/Users/Asus/Documents/GitHub/hw4_rottenpotatoes/app/models/movie.rb:
     - 1
     - 1
     - 0
-    - 
-    - 
-    - 
-  :created_at: 2012-08-20 14:07:36.107051 +08:00
+    - !!null 
+    - !!null 
+    - 1
+    - 0
+    - !!null 
+    - !!null 
+    - !!null 
+  :created_at: 2012-08-21 01:23:42.849195000 +08:00
