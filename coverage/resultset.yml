@@ -105,3 +105,109 @@ RSpec:
     - 
     - 
   :created_at: 2012-08-20 13:31:57.343721 +08:00
+C:/Ruby192/bin/rspec spec: 
+  :original_result: 
+    C:/Users/Asus/Documents/GitHub/hw4_rottenpotatoes/app/controllers/application_controller.rb: 
+    - 1
+    - 1
+    - 
+    C:/Users/Asus/Documents/GitHub/hw4_rottenpotatoes/app/helpers/application_helper.rb: 
+    - 1
+    - 
+    C:/Users/Asus/Documents/GitHub/hw4_rottenpotatoes/app/helpers/movies_helper.rb: 
+    - 1
+    - 
+    - 1
+    - 0
+    - 
+    - 
+    C:/Users/Asus/Documents/GitHub/hw4_rottenpotatoes/app/controllers/movies_controller.rb: 
+    - 1
+    - 
+    - 1
+    - 
+    - 
+    - 
+    - 
+    - 1
+    - 0
+    - 
+    - 0
+    - 0
+    - 0
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 1
+    - 0
+    - 0
+    - 
+    - 
+    - 
+    - 1
+    - 0
+    - 0
+    - 
+    - 0
+    - 
+    - 0
+    - 
+    - 0
+    - 0
+    - 
+    - 0
+    - 0
+    - 0
+    - 0
+    - 
+    - 
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 
+    - 0
+    - 
+    - 
+    - 1
+    - 
+    - 
+    - 
+    - 1
+    - 0
+    - 0
+    - 0
+    - 
+    - 
+    - 1
+    - 0
+    - 
+    - 
+    - 1
+    - 0
+    - 0
+    - 0
+    - 0
+    - 
+    - 
+    - 1
+    - 0
+    - 0
+    - 0
+    - 0
+    - 
+    - 
+    - 
+    C:/Users/Asus/Documents/GitHub/hw4_rottenpotatoes/app/models/movie.rb: 
+    - 1
+    - 1
+    - 0
+    - 
+    - 
+    - 
+  :created_at: 2012-08-20 14:07:36.107051 +08:00
