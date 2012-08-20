@@ -21,21 +21,21 @@
       <img src="./assets/0.4.5/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2012-08-20T01:19:57+08:00">2012-08-20T01:19:57+08:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2012-08-20T13:31:57+08:00">2012-08-20T13:31:57+08:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     All Files
-    (<span class="red">31.91%</span>)
+    (<span class="red">30.36%</span>)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>5</b> files in total.
-    <b>47</b> relevant lines. 
-    <span class="green"><b>15</b> lines covered</span> and
-    <span class="red"><b>32</b> lines missed </span>
+    <b>56</b> relevant lines. 
+    <span class="green"><b>17</b> lines covered</span> and
+    <span class="red"><b>39</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -61,11 +61,11 @@
       
       <tr>
         <td><a href="#3960a81f0a31e590817af3331d00783843f638f6" class="src_link" title="./app/controllers/movies_controller.rb">./app/controllers/movies_controller.rb</a></td>
-        <td class="red">21.05 %</td>
-        <td>63</td>
-        <td>38</td>
-        <td>8</td>
-        <td>30</td>
+        <td class="red">21.28 %</td>
+        <td>81</td>
+        <td>47</td>
+        <td>10</td>
+        <td>37</td>
       </tr>
       
       <tr>
@@ -103,14 +103,14 @@
           <div class="file_list_container" id="Controllers">
   <h2>
     Controllers
-    (<span class="red">25.0%</span>)
+    (<span class="red">24.49%</span>)
   </h2>
   <a name="Controllers"></a>
   <div>
     <b>2</b> files in total.
-    <b>40</b> relevant lines. 
-    <span class="green"><b>10</b> lines covered</span> and
-    <span class="red"><b>30</b> lines missed </span>
+    <b>49</b> relevant lines. 
+    <span class="green"><b>12</b> lines covered</span> and
+    <span class="red"><b>37</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -136,11 +136,11 @@
       
       <tr>
         <td><a href="#3960a81f0a31e590817af3331d00783843f638f6" class="src_link" title="./app/controllers/movies_controller.rb">./app/controllers/movies_controller.rb</a></td>
-        <td class="red">21.05 %</td>
-        <td>63</td>
-        <td>38</td>
-        <td>8</td>
-        <td>30</td>
+        <td class="red">21.28 %</td>
+        <td>81</td>
+        <td>47</td>
+        <td>10</td>
+        <td>37</td>
       </tr>
       
     </tbody>
@@ -366,7 +366,7 @@
     <tr>
       <td colspan="3">
         <h3>./app/controllers/movies_controller.rb</h3>
-        <h4><span class="red">21.05 %</span> covered</h4>
+        <h4><span class="red">21.28 %</span> covered</h4>
       </td>
     </tr>
     <tr>
@@ -409,7 +409,7 @@
         <pre>3</pre>
       </td>
       <td>
-        <pre>  def show</pre>
+        <pre>  def find_similar</pre>
       </td>
       <td class="hits">
         1
@@ -417,28 +417,28 @@
     </tr>
   
     
-    <tr class="miss" data-hits="0">
+    <tr class="never" >
       <td class="line_number">
         <pre>4</pre>
       </td>
       <td>
-        <pre>    id = params[:id] # retrieve movie ID from URI route</pre>
+        <pre>	#@movies = Movie.find(params[:movie_id]).find_similar_by_director</pre>
       </td>
       <td class="hits">
-        0
+        
       </td>
     </tr>
   
     
-    <tr class="miss" data-hits="0">
+    <tr class="never" >
       <td class="line_number">
         <pre>5</pre>
       </td>
       <td>
-        <pre>    @movie = Movie.find(id) # look up movie by unique ID</pre>
+        <pre>	#@movies = Movie.find_by_id(params[:movie_id]).find_similar_by_director</pre>
       </td>
       <td class="hits">
-        0
+        
       </td>
     </tr>
   
@@ -448,7 +448,7 @@
         <pre>6</pre>
       </td>
       <td>
-        <pre>    # will render app/views/movies/show.&lt;extension&gt; by default</pre>
+        <pre>	#@movies = Movie.find_similar(params[:movie_id])</pre>
       </td>
       <td class="hits">
         
@@ -461,6 +461,162 @@
         <pre>7</pre>
       </td>
       <td>
+        <pre>	#@movies = Movie.find_similar_by_director(params[:movie_id])</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="1">
+      <td class="line_number">
+        <pre>8</pre>
+      </td>
+      <td>
+        <pre>	@movie = Movie.find(params[:id])</pre>
+      </td>
+      <td class="hits">
+        1
+      </td>
+    </tr>
+  
+    
+    <tr class="miss" data-hits="0">
+      <td class="line_number">
+        <pre>9</pre>
+      </td>
+      <td>
+        <pre>	@movies = Movie.find_all_by_director(@movie.director)</pre>
+      </td>
+      <td class="hits">
+        0
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>10</pre>
+      </td>
+      <td>
+        <pre>	#debugger</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="miss" data-hits="0">
+      <td class="line_number">
+        <pre>11</pre>
+      </td>
+      <td>
+        <pre>	if @movie.director == ''</pre>
+      </td>
+      <td class="hits">
+        0
+      </td>
+    </tr>
+  
+    
+    <tr class="miss" data-hits="0">
+      <td class="line_number">
+        <pre>12</pre>
+      </td>
+      <td>
+        <pre>		flash[:notice] = &quot;Couldn't find any director info for '#{@movie.title}'&quot;</pre>
+      </td>
+      <td class="hits">
+        0
+      </td>
+    </tr>
+  
+    
+    <tr class="miss" data-hits="0">
+      <td class="line_number">
+        <pre>13</pre>
+      </td>
+      <td>
+        <pre>		redirect_to movies_path</pre>
+      </td>
+      <td class="hits">
+        0
+      </td>
+    </tr>
+  
+    
+    <tr class="miss" data-hits="0">
+      <td class="line_number">
+        <pre>14</pre>
+      </td>
+      <td>
+        <pre>	else if @movies.length == 1</pre>
+      </td>
+      <td class="hits">
+        0
+      </td>
+    </tr>
+  
+    
+    <tr class="miss" data-hits="0">
+      <td class="line_number">
+        <pre>15</pre>
+      </td>
+      <td>
+        <pre>			flash[:notice] = &quot;Couldn't find any movie similar to '#{@movie.title}'&quot;</pre>
+      </td>
+      <td class="hits">
+        0
+      </td>
+    </tr>
+  
+    
+    <tr class="miss" data-hits="0">
+      <td class="line_number">
+        <pre>16</pre>
+      </td>
+      <td>
+        <pre>			redirect_to movies_path</pre>
+      </td>
+      <td class="hits">
+        0
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>17</pre>
+      </td>
+      <td>
+        <pre>		end</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>18</pre>
+      </td>
+      <td>
+        <pre>	end</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>19</pre>
+      </td>
+      <td>
         <pre>  end</pre>
       </td>
       <td class="hits">
@@ -471,7 +627,7 @@
     
     <tr class="never" >
       <td class="line_number">
-        <pre>8</pre>
+        <pre>20</pre>
       </td>
       <td>
         <pre></pre>
@@ -484,10 +640,10 @@
     
     <tr class="hit" data-hits="1">
       <td class="line_number">
-        <pre>9</pre>
+        <pre>21</pre>
       </td>
       <td>
-        <pre>  def index</pre>
+        <pre>  def show</pre>
       </td>
       <td class="hits">
         1
@@ -497,166 +653,10 @@
     
     <tr class="miss" data-hits="0">
       <td class="line_number">
-        <pre>10</pre>
-      </td>
-      <td>
-        <pre>    sort = params[:sort] || session[:sort]</pre>
-      </td>
-      <td class="hits">
-        0
-      </td>
-    </tr>
-  
-    
-    <tr class="miss" data-hits="0">
-      <td class="line_number">
-        <pre>11</pre>
-      </td>
-      <td>
-        <pre>    case sort</pre>
-      </td>
-      <td class="hits">
-        0
-      </td>
-    </tr>
-  
-    
-    <tr class="never" >
-      <td class="line_number">
-        <pre>12</pre>
-      </td>
-      <td>
-        <pre>    when 'title'</pre>
-      </td>
-      <td class="hits">
-        
-      </td>
-    </tr>
-  
-    
-    <tr class="miss" data-hits="0">
-      <td class="line_number">
-        <pre>13</pre>
-      </td>
-      <td>
-        <pre>      ordering,@title_header = {:order =&gt; :title}, 'hilite'</pre>
-      </td>
-      <td class="hits">
-        0
-      </td>
-    </tr>
-  
-    
-    <tr class="never" >
-      <td class="line_number">
-        <pre>14</pre>
-      </td>
-      <td>
-        <pre>    when 'release_date'</pre>
-      </td>
-      <td class="hits">
-        
-      </td>
-    </tr>
-  
-    
-    <tr class="miss" data-hits="0">
-      <td class="line_number">
-        <pre>15</pre>
-      </td>
-      <td>
-        <pre>      ordering,@date_header = {:order =&gt; :release_date}, 'hilite'</pre>
-      </td>
-      <td class="hits">
-        0
-      </td>
-    </tr>
-  
-    
-    <tr class="never" >
-      <td class="line_number">
-        <pre>16</pre>
-      </td>
-      <td>
-        <pre>    end</pre>
-      </td>
-      <td class="hits">
-        
-      </td>
-    </tr>
-  
-    
-    <tr class="miss" data-hits="0">
-      <td class="line_number">
-        <pre>17</pre>
-      </td>
-      <td>
-        <pre>    @all_ratings = Movie.all_ratings</pre>
-      </td>
-      <td class="hits">
-        0
-      </td>
-    </tr>
-  
-    
-    <tr class="miss" data-hits="0">
-      <td class="line_number">
-        <pre>18</pre>
-      </td>
-      <td>
-        <pre>    @selected_ratings = params[:ratings] || session[:ratings] || {}</pre>
-      </td>
-      <td class="hits">
-        0
-      </td>
-    </tr>
-  
-    
-    <tr class="never" >
-      <td class="line_number">
-        <pre>19</pre>
-      </td>
-      <td>
-        <pre></pre>
-      </td>
-      <td class="hits">
-        
-      </td>
-    </tr>
-  
-    
-    <tr class="miss" data-hits="0">
-      <td class="line_number">
-        <pre>20</pre>
-      </td>
-      <td>
-        <pre>    if params[:sort] != session[:sort]</pre>
-      </td>
-      <td class="hits">
-        0
-      </td>
-    </tr>
-  
-    
-    <tr class="miss" data-hits="0">
-      <td class="line_number">
-        <pre>21</pre>
-      </td>
-      <td>
-        <pre>      session[:sort] = sort</pre>
-      </td>
-      <td class="hits">
-        0
-      </td>
-    </tr>
-  
-    
-    <tr class="miss" data-hits="0">
-      <td class="line_number">
         <pre>22</pre>
       </td>
       <td>
-        <pre>      flash.keep</pre>
+        <pre>    id = params[:id] # retrieve movie ID from URI route</pre>
       </td>
       <td class="hits">
         0
@@ -669,7 +669,7 @@
         <pre>23</pre>
       </td>
       <td>
-        <pre>      redirect_to :sort =&gt; sort, :ratings =&gt; @selected_ratings and return</pre>
+        <pre>    @movie = Movie.find(id) # look up movie by unique ID</pre>
       </td>
       <td class="hits">
         0
@@ -682,7 +682,7 @@
         <pre>24</pre>
       </td>
       <td>
-        <pre>    end</pre>
+        <pre>    # will render app/views/movies/show.&lt;extension&gt; by default</pre>
       </td>
       <td class="hits">
         
@@ -695,6 +695,19 @@
         <pre>25</pre>
       </td>
       <td>
+        <pre>  end</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>26</pre>
+      </td>
+      <td>
         <pre></pre>
       </td>
       <td class="hits">
@@ -703,28 +716,15 @@
     </tr>
   
     
-    <tr class="miss" data-hits="0">
-      <td class="line_number">
-        <pre>26</pre>
-      </td>
-      <td>
-        <pre>    if params[:ratings] != session[:ratings] and @selected_ratings != {}</pre>
-      </td>
-      <td class="hits">
-        0
-      </td>
-    </tr>
-  
-    
-    <tr class="miss" data-hits="0">
+    <tr class="hit" data-hits="1">
       <td class="line_number">
         <pre>27</pre>
       </td>
       <td>
-        <pre>      session[:sort] = sort</pre>
+        <pre>  def index</pre>
       </td>
       <td class="hits">
-        0
+        1
       </td>
     </tr>
   
@@ -734,7 +734,7 @@
         <pre>28</pre>
       </td>
       <td>
-        <pre>      session[:ratings] = @selected_ratings</pre>
+        <pre>    sort = params[:sort] || session[:sort]</pre>
       </td>
       <td class="hits">
         0
@@ -747,20 +747,7 @@
         <pre>29</pre>
       </td>
       <td>
-        <pre>      flash.keep</pre>
-      </td>
-      <td class="hits">
-        0
-      </td>
-    </tr>
-  
-    
-    <tr class="miss" data-hits="0">
-      <td class="line_number">
-        <pre>30</pre>
-      </td>
-      <td>
-        <pre>      redirect_to :sort =&gt; sort, :ratings =&gt; @selected_ratings and return</pre>
+        <pre>    case sort</pre>
       </td>
       <td class="hits">
         0
@@ -770,7 +757,59 @@
     
     <tr class="never" >
       <td class="line_number">
+        <pre>30</pre>
+      </td>
+      <td>
+        <pre>    when 'title'</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="miss" data-hits="0">
+      <td class="line_number">
         <pre>31</pre>
+      </td>
+      <td>
+        <pre>      ordering,@title_header = {:order =&gt; :title}, 'hilite'</pre>
+      </td>
+      <td class="hits">
+        0
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>32</pre>
+      </td>
+      <td>
+        <pre>    when 'release_date'</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="miss" data-hits="0">
+      <td class="line_number">
+        <pre>33</pre>
+      </td>
+      <td>
+        <pre>      ordering,@date_header = {:order =&gt; :release_date}, 'hilite'</pre>
+      </td>
+      <td class="hits">
+        0
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>34</pre>
       </td>
       <td>
         <pre>    end</pre>
@@ -783,10 +822,23 @@
     
     <tr class="miss" data-hits="0">
       <td class="line_number">
-        <pre>32</pre>
+        <pre>35</pre>
       </td>
       <td>
-        <pre>    @movies = Movie.find_all_by_rating(@selected_ratings.keys, ordering)</pre>
+        <pre>    @all_ratings = Movie.all_ratings</pre>
+      </td>
+      <td class="hits">
+        0
+      </td>
+    </tr>
+  
+    
+    <tr class="miss" data-hits="0">
+      <td class="line_number">
+        <pre>36</pre>
+      </td>
+      <td>
+        <pre>    @selected_ratings = params[:ratings] || session[:ratings] || {}</pre>
       </td>
       <td class="hits">
         0
@@ -796,20 +848,7 @@
     
     <tr class="never" >
       <td class="line_number">
-        <pre>33</pre>
-      </td>
-      <td>
-        <pre>  end</pre>
-      </td>
-      <td class="hits">
-        
-      </td>
-    </tr>
-  
-    
-    <tr class="never" >
-      <td class="line_number">
-        <pre>34</pre>
+        <pre>37</pre>
       </td>
       <td>
         <pre></pre>
@@ -820,67 +859,28 @@
     </tr>
   
     
-    <tr class="hit" data-hits="1">
-      <td class="line_number">
-        <pre>35</pre>
-      </td>
-      <td>
-        <pre>  def new</pre>
-      </td>
-      <td class="hits">
-        1
-      </td>
-    </tr>
-  
-    
-    <tr class="never" >
-      <td class="line_number">
-        <pre>36</pre>
-      </td>
-      <td>
-        <pre>    # default: render 'new' template</pre>
-      </td>
-      <td class="hits">
-        
-      </td>
-    </tr>
-  
-    
-    <tr class="never" >
-      <td class="line_number">
-        <pre>37</pre>
-      </td>
-      <td>
-        <pre>  end</pre>
-      </td>
-      <td class="hits">
-        
-      </td>
-    </tr>
-  
-    
-    <tr class="never" >
+    <tr class="miss" data-hits="0">
       <td class="line_number">
         <pre>38</pre>
       </td>
       <td>
-        <pre></pre>
+        <pre>    if params[:sort] != session[:sort]</pre>
       </td>
       <td class="hits">
-        
+        0
       </td>
     </tr>
   
     
-    <tr class="hit" data-hits="1">
+    <tr class="miss" data-hits="0">
       <td class="line_number">
         <pre>39</pre>
       </td>
       <td>
-        <pre>  def create</pre>
+        <pre>      session[:sort] = sort</pre>
       </td>
       <td class="hits">
-        1
+        0
       </td>
     </tr>
   
@@ -890,7 +890,7 @@
         <pre>40</pre>
       </td>
       <td>
-        <pre>    @movie = Movie.create!(params[:movie])</pre>
+        <pre>      flash.keep</pre>
       </td>
       <td class="hits">
         0
@@ -903,7 +903,7 @@
         <pre>41</pre>
       </td>
       <td>
-        <pre>    flash[:notice] = &quot;#{@movie.title} was successfully created.&quot;</pre>
+        <pre>      redirect_to :sort =&gt; sort, :ratings =&gt; @selected_ratings and return</pre>
       </td>
       <td class="hits">
         0
@@ -911,15 +911,15 @@
     </tr>
   
     
-    <tr class="miss" data-hits="0">
+    <tr class="never" >
       <td class="line_number">
         <pre>42</pre>
       </td>
       <td>
-        <pre>    redirect_to movies_path</pre>
+        <pre>    end</pre>
       </td>
       <td class="hits">
-        0
+        
       </td>
     </tr>
   
@@ -929,19 +929,6 @@
         <pre>43</pre>
       </td>
       <td>
-        <pre>  end</pre>
-      </td>
-      <td class="hits">
-        
-      </td>
-    </tr>
-  
-    
-    <tr class="never" >
-      <td class="line_number">
-        <pre>44</pre>
-      </td>
-      <td>
         <pre></pre>
       </td>
       <td class="hits">
@@ -950,15 +937,28 @@
     </tr>
   
     
-    <tr class="hit" data-hits="1">
+    <tr class="miss" data-hits="0">
+      <td class="line_number">
+        <pre>44</pre>
+      </td>
+      <td>
+        <pre>    if params[:ratings] != session[:ratings] and @selected_ratings != {}</pre>
+      </td>
+      <td class="hits">
+        0
+      </td>
+    </tr>
+  
+    
+    <tr class="miss" data-hits="0">
       <td class="line_number">
         <pre>45</pre>
       </td>
       <td>
-        <pre>  def edit</pre>
+        <pre>      session[:sort] = sort</pre>
       </td>
       <td class="hits">
-        1
+        0
       </td>
     </tr>
   
@@ -968,7 +968,33 @@
         <pre>46</pre>
       </td>
       <td>
-        <pre>    @movie = Movie.find params[:id]</pre>
+        <pre>      session[:ratings] = @selected_ratings</pre>
+      </td>
+      <td class="hits">
+        0
+      </td>
+    </tr>
+  
+    
+    <tr class="miss" data-hits="0">
+      <td class="line_number">
+        <pre>47</pre>
+      </td>
+      <td>
+        <pre>      flash.keep</pre>
+      </td>
+      <td class="hits">
+        0
+      </td>
+    </tr>
+  
+    
+    <tr class="miss" data-hits="0">
+      <td class="line_number">
+        <pre>48</pre>
+      </td>
+      <td>
+        <pre>      redirect_to :sort =&gt; sort, :ratings =&gt; @selected_ratings and return</pre>
       </td>
       <td class="hits">
         0
@@ -978,7 +1004,33 @@
     
     <tr class="never" >
       <td class="line_number">
-        <pre>47</pre>
+        <pre>49</pre>
+      </td>
+      <td>
+        <pre>    end</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="miss" data-hits="0">
+      <td class="line_number">
+        <pre>50</pre>
+      </td>
+      <td>
+        <pre>    @movies = Movie.find_all_by_rating(@selected_ratings.keys, ordering)</pre>
+      </td>
+      <td class="hits">
+        0
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>51</pre>
       </td>
       <td>
         <pre>  end</pre>
@@ -991,7 +1043,7 @@
     
     <tr class="never" >
       <td class="line_number">
-        <pre>48</pre>
+        <pre>52</pre>
       </td>
       <td>
         <pre></pre>
@@ -1004,65 +1056,13 @@
     
     <tr class="hit" data-hits="1">
       <td class="line_number">
-        <pre>49</pre>
-      </td>
-      <td>
-        <pre>  def update</pre>
-      </td>
-      <td class="hits">
-        1
-      </td>
-    </tr>
-  
-    
-    <tr class="miss" data-hits="0">
-      <td class="line_number">
-        <pre>50</pre>
-      </td>
-      <td>
-        <pre>    @movie = Movie.find params[:id]</pre>
-      </td>
-      <td class="hits">
-        0
-      </td>
-    </tr>
-  
-    
-    <tr class="miss" data-hits="0">
-      <td class="line_number">
-        <pre>51</pre>
-      </td>
-      <td>
-        <pre>    @movie.update_attributes!(params[:movie])</pre>
-      </td>
-      <td class="hits">
-        0
-      </td>
-    </tr>
-  
-    
-    <tr class="miss" data-hits="0">
-      <td class="line_number">
-        <pre>52</pre>
-      </td>
-      <td>
-        <pre>    flash[:notice] = &quot;#{@movie.title} was successfully updated.&quot;</pre>
-      </td>
-      <td class="hits">
-        0
-      </td>
-    </tr>
-  
-    
-    <tr class="miss" data-hits="0">
-      <td class="line_number">
         <pre>53</pre>
       </td>
       <td>
-        <pre>    redirect_to movie_path(@movie)</pre>
+        <pre>  def new</pre>
       </td>
       <td class="hits">
-        0
+        1
       </td>
     </tr>
   
@@ -1072,7 +1072,7 @@
         <pre>54</pre>
       </td>
       <td>
-        <pre>  end</pre>
+        <pre>    # default: render 'new' template</pre>
       </td>
       <td class="hits">
         
@@ -1085,6 +1085,19 @@
         <pre>55</pre>
       </td>
       <td>
+        <pre>  end</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>56</pre>
+      </td>
+      <td>
         <pre></pre>
       </td>
       <td class="hits">
@@ -1095,10 +1108,10 @@
     
     <tr class="hit" data-hits="1">
       <td class="line_number">
-        <pre>56</pre>
+        <pre>57</pre>
       </td>
       <td>
-        <pre>  def destroy</pre>
+        <pre>  def create</pre>
       </td>
       <td class="hits">
         1
@@ -1108,23 +1121,10 @@
     
     <tr class="miss" data-hits="0">
       <td class="line_number">
-        <pre>57</pre>
-      </td>
-      <td>
-        <pre>    @movie = Movie.find(params[:id])</pre>
-      </td>
-      <td class="hits">
-        0
-      </td>
-    </tr>
-  
-    
-    <tr class="miss" data-hits="0">
-      <td class="line_number">
         <pre>58</pre>
       </td>
       <td>
-        <pre>    @movie.destroy</pre>
+        <pre>    @movie = Movie.create!(params[:movie])</pre>
       </td>
       <td class="hits">
         0
@@ -1137,7 +1137,7 @@
         <pre>59</pre>
       </td>
       <td>
-        <pre>    flash[:notice] = &quot;Movie '#{@movie.title}' deleted.&quot;</pre>
+        <pre>    flash[:notice] = &quot;#{@movie.title} was successfully created.&quot;</pre>
       </td>
       <td class="hits">
         0
@@ -1184,9 +1184,243 @@
     </tr>
   
     
-    <tr class="never" >
+    <tr class="hit" data-hits="1">
       <td class="line_number">
         <pre>63</pre>
+      </td>
+      <td>
+        <pre>  def edit</pre>
+      </td>
+      <td class="hits">
+        1
+      </td>
+    </tr>
+  
+    
+    <tr class="miss" data-hits="0">
+      <td class="line_number">
+        <pre>64</pre>
+      </td>
+      <td>
+        <pre>    @movie = Movie.find params[:id]</pre>
+      </td>
+      <td class="hits">
+        0
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>65</pre>
+      </td>
+      <td>
+        <pre>  end</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>66</pre>
+      </td>
+      <td>
+        <pre></pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="1">
+      <td class="line_number">
+        <pre>67</pre>
+      </td>
+      <td>
+        <pre>  def update</pre>
+      </td>
+      <td class="hits">
+        1
+      </td>
+    </tr>
+  
+    
+    <tr class="miss" data-hits="0">
+      <td class="line_number">
+        <pre>68</pre>
+      </td>
+      <td>
+        <pre>    @movie = Movie.find params[:id]</pre>
+      </td>
+      <td class="hits">
+        0
+      </td>
+    </tr>
+  
+    
+    <tr class="miss" data-hits="0">
+      <td class="line_number">
+        <pre>69</pre>
+      </td>
+      <td>
+        <pre>    @movie.update_attributes!(params[:movie])</pre>
+      </td>
+      <td class="hits">
+        0
+      </td>
+    </tr>
+  
+    
+    <tr class="miss" data-hits="0">
+      <td class="line_number">
+        <pre>70</pre>
+      </td>
+      <td>
+        <pre>    flash[:notice] = &quot;#{@movie.title} was successfully updated.&quot;</pre>
+      </td>
+      <td class="hits">
+        0
+      </td>
+    </tr>
+  
+    
+    <tr class="miss" data-hits="0">
+      <td class="line_number">
+        <pre>71</pre>
+      </td>
+      <td>
+        <pre>    redirect_to movie_path(@movie)</pre>
+      </td>
+      <td class="hits">
+        0
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>72</pre>
+      </td>
+      <td>
+        <pre>  end</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>73</pre>
+      </td>
+      <td>
+        <pre></pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="1">
+      <td class="line_number">
+        <pre>74</pre>
+      </td>
+      <td>
+        <pre>  def destroy</pre>
+      </td>
+      <td class="hits">
+        1
+      </td>
+    </tr>
+  
+    
+    <tr class="miss" data-hits="0">
+      <td class="line_number">
+        <pre>75</pre>
+      </td>
+      <td>
+        <pre>    @movie = Movie.find(params[:id])</pre>
+      </td>
+      <td class="hits">
+        0
+      </td>
+    </tr>
+  
+    
+    <tr class="miss" data-hits="0">
+      <td class="line_number">
+        <pre>76</pre>
+      </td>
+      <td>
+        <pre>    @movie.destroy</pre>
+      </td>
+      <td class="hits">
+        0
+      </td>
+    </tr>
+  
+    
+    <tr class="miss" data-hits="0">
+      <td class="line_number">
+        <pre>77</pre>
+      </td>
+      <td>
+        <pre>    flash[:notice] = &quot;Movie '#{@movie.title}' deleted.&quot;</pre>
+      </td>
+      <td class="hits">
+        0
+      </td>
+    </tr>
+  
+    
+    <tr class="miss" data-hits="0">
+      <td class="line_number">
+        <pre>78</pre>
+      </td>
+      <td>
+        <pre>    redirect_to movies_path</pre>
+      </td>
+      <td class="hits">
+        0
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>79</pre>
+      </td>
+      <td>
+        <pre>  end</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>80</pre>
+      </td>
+      <td>
+        <pre></pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>81</pre>
       </td>
       <td>
         <pre>end</pre>

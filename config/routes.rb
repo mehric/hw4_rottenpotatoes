@@ -15,8 +15,13 @@ Rottenpotatoes::Application.routes.draw do
   resources :movies
 
   resources :movies do
-    #get 'movie_direct_by', :on => :member
+    get 'find_similar', :on => :member
 	#match "/movies/movie_direct_by/:title" => "movies#direct_by", :as => :movie_direct_by
+	#match "../find_similar/:id" => "movies#find_similar", :as => :find_similar, :via => :get
+	match '/find_similar' => "movies#find_similar", :as => :find_similar
+	#movie_find_similar get "/movies/:id/find_similar", :on => :member
+	#match '/movies/find_similar/:id' => "movies#find_similar", :as => :find_similar
+	#movie_find_similar GET /movies/:id/find_similar {:action=>"find_similar", :controller=>"movies"}
   end
 
   # Sample resource route with options:

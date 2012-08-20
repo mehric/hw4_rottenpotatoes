@@ -1,4 +1,4 @@
-# Add a declarative step here for populating the DB with movies.
+# New steps
 Given /the following movies exist/ do |movies_table|
 	movies_table.hashes.each do |movie|
 		Movie.create!(movie)
@@ -9,10 +9,6 @@ end
 Then /the director of "(.*)" should be "(.*)"/ do |movie_name, director_name|
 	assert Movie.find_by_title(movie_name).director == director_name
 end
-
-#Given /I am on the details page for "(.*)"/ do |page_name|
-#	movie_path(page_name)
-#end
 
 
 #-------------------------------------------------
